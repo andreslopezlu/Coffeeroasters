@@ -1,2 +1,88 @@
-@use "./resetter.scss";
-@use "./variables.scss";
+@use "resetter";
+@use "variables";
+
+@mixin text($color, $align, $font, $size, $style: normal, $weight, $height){
+    color: $color;
+    text-align: $align;
+    font-family: $font;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin flexbox($direction: row, $justify: flex-start, $align: stretch){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.main {
+    padding: 32px 6.5% 72px 6.5%;
+    margin: 0 auto;
+    background-color: variables.$col4;
+}
+
+.navbar {
+    @include flexbox(row, space-between);
+    margin-bottom: 40px;
+
+    .menu-button {
+        width: 18px;
+        height: auto;
+        fill: variables.$col2;
+    }
+}
+
+.main-section {
+    background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+    
+    .main-section__background {
+        width: 100%;
+        height: 500px;
+        z-index: 1;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        filter: blur(0.1);
+    }
+
+    .main-section__info {
+        @include flexbox(column, center, center);
+        padding-left: 7%;
+        padding-right: 7%;
+        position: relative;
+        z-index: 2;
+
+        .main-section__title {
+            margin-top: 100px;
+            margin-bottom: 40px;
+            @include text(variables.$col4, center, variables.$font1, 4rem, normal, 900, 40px);
+        }
+
+        .main-section__description {
+            margin-bottom: 39px;
+            @include text(variables.$col4, center, variables.$font2, 1.5rem, normal, 400, 25px);
+        }
+
+        .call-to-action__button {
+            height: 56px;
+            background-color: variables.$col1;
+            width: 66%;
+            border-radius: 6px;
+            border: 0;
+            @include text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px)
+        }
+    }
+}
