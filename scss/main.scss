@@ -185,5 +185,52 @@
             }
         }
     }
+}
 
+.process-section {
+    position: relative;
+    top: 720px;
+    @include flexbox(column, center, center);
+    
+    .process-section__title {
+        @include text(variables.$col5, center, variables.$font1, 2.4rem, normal, 900, 32px); 
+        margin-bottom: 80px;
+    }
+    
+    .process-section__list {
+        @include flexbox(column, center, center);
+        
+        .process-section__item {
+            @include flexbox(column, center, center);
+            margin-bottom: 56px;
+
+            .process-item__step {
+                @include text(variables.$col3, center, variables.$font1, 7.2rem, normal, 900, 72px); 
+                margin-bottom: 24px;
+            }
+            
+            .process-item__title {
+                @include text(variables.$col2, center, variables.$font1, 2.8rem, normal, 900, 32px); 
+                margin-bottom: 24px;
+            }
+            
+            .process-item__description {
+                @include text(variables.$col2, center, variables.$font2, 1.5rem, normal, 400, 25px); 
+            }
+        }
+    }
+    
+    .call-to-action__button {
+        width: 217px;
+        height: 56px;
+        background-color: variables.$col1;
+        border-radius: 6px;
+        border: 0;
+        @include text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px); 
+    }
+}
+
+.footer {
+    position: relative;
+    top: 1780px;
 }
