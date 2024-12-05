@@ -164,15 +164,15 @@ table {
   padding-right: 7%;
   margin-bottom: 120px;
 }
+.collection-section .first-items {
+  margin-bottom: 48px;
+}
 .collection-section .collection-section__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-}
-.collection-section .collection-section__item.first-items {
-  margin-bottom: 48px;
 }
 .collection-section .collection-section__item .collection-item__image img {
   height: 151px;
@@ -206,13 +206,14 @@ table {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: #333D4B;
   padding-left: 7%;
   padding-right: 7%;
-  height: 902px;
-  border-radius: 10px;
+  position: relative;
+  margin-bottom: 120px;
 }
 .chooseus-section .chooseus-section__info {
+  position: relative;
+  z-index: 1;
   margin-top: 64px;
 }
 .chooseus-section .chooseus-section__info .chooseus-section__title {
@@ -241,6 +242,8 @@ table {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  position: relative;
+  z-index: 1;
 }
 .chooseus-section .chooseus-section__list .chooseus-section__item {
   display: flex;
@@ -280,15 +283,27 @@ table {
   padding-left: 12%;
   padding-right: 12%;
 }
+.chooseus-section .chooseus-section__list > :nth-child(3) {
+  margin-bottom: 0;
+}
+.chooseus-section .chooseus-section__background {
+  background-color: #333D4B;
+  height: 902px;
+  border-radius: 10px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
 
 .process-section {
   position: relative;
-  top: 720px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  margin-bottom: 120px;
 }
 .process-section .process-section__title {
   color: #83888F;
@@ -360,6 +375,41 @@ table {
 }
 
 .footer {
-  position: relative;
-  top: 1780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #2C343E;
+}
+.footer .footer__logo {
+  margin-top: 54px;
+  margin-bottom: 49px;
+}
+.footer .links .links__item {
+  color: #83888F;
+  text-align: center;
+  font-family: "Barlow";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.923px;
+  margin-bottom: 24px;
+}
+.footer .links > :nth-child(3) {
+  margin-bottom: 48px;
+}
+.footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 36%;
+  margin-bottom: 54px;
+}
+.footer .social .social__item {
+  width: 24px;
 }/*# sourceMappingURL=main.css.map */
