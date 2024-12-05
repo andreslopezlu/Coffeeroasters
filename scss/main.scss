@@ -107,12 +107,12 @@
         margin-bottom: 120px;
     }
     
+    .first-items {
+        margin-bottom: 48px;
+    }
+
     .collection-section__item {
         @include flexbox(column, center, center);
-
-        &.first-items {
-            margin-bottom: 48px;
-        }
         
         .collection-item__image {
             img {
@@ -136,13 +136,14 @@
 
 .chooseus-section {
     @include flexbox(column, flex-start, center);
-    background-color: variables.$col2;
     padding-left: 7%;
     padding-right: 7%;
-    height: 902px;
-    border-radius: 10px;;
-
+    position: relative;
+    margin-bottom: 120px;
+    
     .chooseus-section__info {
+        position: relative;
+        z-index: 1;
         margin-top: 64px;
 
         .chooseus-section__title {
@@ -158,6 +159,8 @@
 
     .chooseus-section__list {
         @include flexbox(column, center, center);
+        position: relative;
+        z-index: 1;
 
         .chooseus-section__item {
             @include flexbox(column, center, center);
@@ -184,13 +187,27 @@
                 padding-right: 12%;
             }
         }
+
+        >:nth-child(3) {
+            margin-bottom: 0;
+        }
+    }
+
+    .chooseus-section__background {
+        background-color: variables.$col2;
+        height: 902px;
+        border-radius: 10px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 0;
     }
 }
 
 .process-section {
     position: relative;
-    top: 720px;
     @include flexbox(column, center, center);
+    margin-bottom: 120px;
     
     .process-section__title {
         @include text(variables.$col5, center, variables.$font1, 2.4rem, normal, 900, 32px); 
@@ -231,6 +248,34 @@
 }
 
 .footer {
-    position: relative;
-    top: 1780px;
+    @include flexbox(column, center, center);
+    background-color: variables.$col10;
+
+    .footer__logo {
+        margin-top: 54px;
+        margin-bottom: 49px;
+    }
+
+    .links {
+        .links__item {
+            @include text(variables.$col5, center, variables.$font2, 1.2rem, normal, 700, 15px);
+            text-transform: uppercase;
+            letter-spacing: 0.923px;
+            margin-bottom: 24px;
+        }
+
+        >:nth-child(3) {
+            margin-bottom: 48px;
+        }
+    }
+
+    .social {
+        @include flexbox(row, space-between, center);
+        width: 36%;
+        margin-bottom: 54px;
+
+        .social__item {
+            width: 24px;
+        }
+    }
 }
