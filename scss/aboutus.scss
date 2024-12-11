@@ -3,3 +3,130 @@
 @use "mixins";
 @use "common";
 
+.aboutus {
+    @include mixins.flexbox(column, flex-start, center);
+    position: relative;
+    height: 400px;
+    width: auto;
+    z-index: 0;
+    margin-bottom: 120px;
+}
+
+.aboutus__image {
+    border-radius: 10px;
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.aboutus__info {
+    @include mixins.flexbox(column, center, center);
+    z-index: 2;
+}
+
+.aboutus__title {
+    @include mixins.text(variables.$col4, center, variables.$font1, 2.8rem, normal, 900, 28px);
+    margin-top: 111px;
+    margin-bottom: 24px;
+}
+
+.aboutus__description {
+    @include mixins.text(variables.$col4, center, variables.$font2, 1.5rem, normal, 400, 25px);
+    width: 85%;
+}
+
+.commitment {
+    @include mixins.flexbox(column, center, center);
+    margin-bottom: 200px;
+}
+
+.commitment__image {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.commitment__info {
+    @include mixins.flexbox(column, center, center);
+    
+}
+
+.commitment__title {
+    @include mixins.text(variables.$col2, center, variables.$font1, 3.2rem, normal, 900, 48px);
+    margin-bottom: 30px;
+}
+
+.commitment__description {
+    @include mixins.text(variables.$col2, center, variables.$font2, 1.5rem, normal, 400, 25px);
+}
+
+.quality {
+    @include mixins.flexbox(column, center, center);
+    background-color: variables.$col2;
+    border-radius: 10px;
+    margin-bottom: 120px;
+}
+
+.quality__image {
+    width: 85%;
+    height: auto;
+    position: relative;
+    top: -70px;
+    border-radius: 10px;
+}
+
+.quality__info {
+    @include mixins.flexbox(column, center, center);
+    width: 85%;
+}
+
+.quality__title {
+    @include mixins.text(variables.$col4, center, variables.$font1, 2.8rem, normal, 900, 28px);
+    margin-bottom: 24px;
+}
+
+.quality__description {
+    @include mixins.text(variables.$col4, center, variables.$font2, 1.5rem, normal, 400, 25px);
+    margin-bottom: 60px;
+}
+
+.headquarters {
+    @include mixins.flexbox(column, center, center);
+    margin-bottom: 120px;
+}
+
+.headquarters__title {
+    @include mixins.text(variables.$col5, center, variables.$font1, 2.4rem, normal, 900, 32px);
+    margin-bottom: 72px;
+}
+
+.headquarters__locations {
+    @include mixins.flexbox(column, center, center);
+}
+
+.headquarters__locations > :nth-child(3) {
+    margin-bottom: 0;
+}
+
+.headquarters__item {
+    @include mixins.flexbox(column, center, center);
+    margin-bottom: 80px;
+}
+
+.item__image {
+    margin-bottom: 48px;
+}
+
+.item__title {
+    @include mixins.text(variables.$col2, center, variables.$font1, 2.8rem, normal, 900, 36px);
+    margin-bottom: 22px;
+}
+
+
+.item__location {
+    @include mixins.text(variables.$col2, center, variables.$font2, 1.6rem, normal, 400, 26px);
+}
