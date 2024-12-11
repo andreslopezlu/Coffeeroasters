@@ -72,6 +72,46 @@ table {
   fill: #333D4B;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #2C343E;
+}
+.footer .footer__logo {
+  margin-top: 54px;
+  margin-bottom: 49px;
+}
+.footer .links .links__item {
+  color: #83888F;
+  text-align: center;
+  font-family: "Barlow";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.923px;
+  margin-bottom: 24px;
+}
+.footer .links > :nth-child(3) {
+  margin-bottom: 48px;
+}
+.footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 36%;
+  margin-bottom: 54px;
+}
+.footer .social .social__item {
+  width: 24px;
+}
+
 .main-section {
   background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
   height: 500px;
@@ -90,6 +130,7 @@ table {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   filter: blur(0.1);
+  border-radius: 10px;
 }
 .main-section .main-section__info {
   display: flex;
@@ -372,44 +413,4 @@ table {
   font-style: normal;
   font-weight: 900;
   line-height: 25px;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  background-color: #2C343E;
-}
-.footer .footer__logo {
-  margin-top: 54px;
-  margin-bottom: 49px;
-}
-.footer .links .links__item {
-  color: #83888F;
-  text-align: center;
-  font-family: "Barlow";
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 15px;
-  text-transform: uppercase;
-  letter-spacing: 0.923px;
-  margin-bottom: 24px;
-}
-.footer .links > :nth-child(3) {
-  margin-bottom: 48px;
-}
-.footer .social {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 36%;
-  margin-bottom: 54px;
-}
-.footer .social .social__item {
-  width: 24px;
 }/*# sourceMappingURL=main.css.map */

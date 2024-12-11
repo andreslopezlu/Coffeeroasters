@@ -1,0 +1,17 @@
+@mixin text($color, $align, $font, $size, $style: normal, $weight, $height){
+    color: $color;
+    text-align: $align;
+    font-family: $font;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin flexbox($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
