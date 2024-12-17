@@ -110,4 +110,59 @@ table {
 }
 .footer .social .social__item {
   width: 24px;
+}
+
+.create-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  height: 400px;
+  width: auto;
+  z-index: 0;
+  margin-bottom: 120px;
+}
+
+.create-plan__image {
+  border-radius: 10px;
+  width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.create-plan__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  z-index: 2;
+}
+
+.create-plan__title {
+  color: #FEFCF7;
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  margin-top: 101px;
+  margin-bottom: 22px;
+}
+
+.create-plan__description {
+  color: #FEFCF7;
+  text-align: center;
+  font-family: "Barlow";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  width: 85%;
 }/*# sourceMappingURL=subscribe.css.map */
