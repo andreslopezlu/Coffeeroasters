@@ -112,6 +112,16 @@ table {
   width: 24px;
 }
 
+.main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar, .footer {
+  margin-left: 6.5%;
+  margin-right: 6.5%;
+}
+
 .create-plan {
   display: flex;
   flex-direction: column;
@@ -123,6 +133,8 @@ table {
   width: auto;
   z-index: 0;
   margin-bottom: 120px;
+  margin-left: 6.5%;
+  margin-right: 6.5%;
 }
 
 .create-plan__image {
@@ -165,4 +177,65 @@ table {
   font-weight: 400;
   line-height: 25px;
   width: 85%;
+}
+
+.create-plan__steps {
+  background-color: #2C343E;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  border-radius: 10px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.steps__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 56px;
+}
+
+.step__number {
+  color: #FDD6BA;
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 7.2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 72px;
+  margin-bottom: 24px;
+}
+
+.step__title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 32px;
+  margin-bottom: 24px;
+}
+
+.step__description {
+  color: #FFF;
+  text-align: center;
+  font-family: "Barlow";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  width: 85%;
+}
+
+.steps > :nth-child(3) {
+  margin-bottom: 0;
 }/*# sourceMappingURL=subscribe.css.map */

@@ -3,6 +3,16 @@
 @use "mixins";
 @use "common";
 
+.main {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar, .footer {
+    margin-left: 6.5%;
+    margin-right: 6.5%;
+}
+
 .create-plan {
     @include mixins.flexbox(column, flex-start, center);
     position: relative;
@@ -10,6 +20,8 @@
     width: auto;
     z-index: 0;
     margin-bottom: 120px;
+    margin-left: 6.5%;
+    margin-right: 6.5%;
 }
 
 .create-plan__image {
@@ -35,4 +47,39 @@
 .create-plan__description {
     @include mixins.text(variables.$col4, center, variables.$font2, 1.5rem, normal, 400, 25px);
     width: 85%;
+}
+
+.create-plan__steps {
+    background-color: variables.$col10;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    border-radius: 10px;
+} 
+
+.steps {
+    @include mixins.flexbox(column, center, center);
+}
+
+.steps__item {
+    @include mixins.flexbox(column, center, center);
+    margin-bottom: 56px;
+}
+
+.step__number {
+    @include mixins.text(variables.$col3, center, variables.$font1, 7.2rem, normal, 900, 72px);
+    margin-bottom: 24px;
+}
+
+.step__title {
+    @include mixins.text(variables.$col9, center, variables.$font1, 2.8rem, normal, 900, 32px);
+    margin-bottom: 24px;
+}
+
+.step__description {
+    @include mixins.text(variables.$col9, center, variables.$font2, 1.5rem, normal, 400, 25px);
+    width: 85%;
+}
+
+.steps > :nth-child(3) {
+    margin-bottom: 0;
 }
