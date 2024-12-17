@@ -117,7 +117,7 @@ table {
   padding-right: 0;
 }
 
-.navbar, .footer {
+.navbar, .footer, .process, .types, .quantity, .grind, .deliver, .order-summary {
   margin-left: 6.5%;
   margin-right: 6.5%;
 }
@@ -180,18 +180,16 @@ table {
 }
 
 .create-plan__steps {
-  background-color: #2C343E;
-  padding-top: 80px;
-  padding-bottom: 60px;
-  border-radius: 10px;
-}
-
-.steps {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  background-color: #2C343E;
+  padding-top: 80px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  margin-bottom: 120px;
 }
 
 .steps__item {
@@ -236,6 +234,69 @@ table {
   width: 85%;
 }
 
-.steps > :nth-child(3) {
+.create-plan__steps > :nth-child(3) {
   margin-bottom: 0;
+}
+
+.process, .types, .quantity, .grind, .deliver, .order-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 96px;
+}
+
+.process-top, .types-top, .quantity-top, .grind-top, .deliver-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.process__list, .types__list, .quantity__list, .grind__list, .deliver__list {
+  width: 100%;
+}
+
+.process-header, .types-header, .quantity-header, .grind-header, .deliver-header {
+  color: #83888F;
+  text-align: left;
+  font-family: "Fraunces";
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 28px;
+  width: 70%;
+}
+
+.process__item, .type__item, .quantity__item, .grind__item, .deliver__item {
+  background-color: #F4F1EB;
+  padding: 24px 0 24px 24px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.process__title, .type__title, .quantity__title, .grind__title, .deliver__title {
+  color: #333D4B;
+  text-align: left;
+  font-family: "Fraunces";
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+.process__description, .type__description, .quantity__description, .grind__description, .deliver__description {
+  color: #333D4B;
+  text-align: left;
+  font-family: "Barlow";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  width: 80%;
 }/*# sourceMappingURL=subscribe.css.map */
