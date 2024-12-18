@@ -118,3 +118,23 @@
     @include mixins.text(variables.$col2, left, variables.$font2, 1.6rem, normal, 400, 26px);
     width: 80%;
 }
+
+.order-summary {
+    @include mixins.flexbox(column, center, flex-start);
+    background-color: variables.$col10;
+    border-radius: 10px;
+    padding-left: 24px;
+}
+
+.order-summary__title {
+    @include mixins.text(variables.$col9, left, variables.$font2, 1.6rem, normal, 400, 26px);
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+.order-summary__info {
+    @include mixins.text(variables.$col9, left, variables.$font1, 2.4rem, normal, 900, 40px);
+    width: 90%;
+    margin-bottom: 24px;
+}
