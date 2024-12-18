@@ -138,3 +138,15 @@
     width: 90%;
     margin-bottom: 24px;
 }
+
+.create-plan__button {
+    @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px);
+    width: 220px;
+    height: 56px;
+    background-color: variables.$col1;
+    border: 0;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
