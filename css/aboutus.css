@@ -128,7 +128,7 @@ table {
 .aboutus__image {
   border-radius: 10px;
   width: 100%;
-  min-height: 100%;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
