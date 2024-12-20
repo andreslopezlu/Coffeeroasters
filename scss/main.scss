@@ -3,6 +3,15 @@
 @use "mixins";
 @use "common";
 
+.call-to-action__button {
+    width: 220px;
+    height: 56px;
+    background-color: variables.$col1;
+    border-radius: 6px;
+    border: 0;
+    @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px); 
+}   
+
 .main-section {
     background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
     height: 500px;
@@ -40,15 +49,6 @@
         .main-section__description {
             margin-bottom: 39px;
             @include mixins.text(variables.$col4, center, variables.$font2, 1.5rem, normal, 400, 25px);
-        }
-
-        .call-to-action__button {
-            height: 56px;
-            background-color: variables.$col1;
-            width: 66%;
-            border-radius: 6px;
-            border: 0;
-            @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px)
         }
     }
 }
@@ -199,14 +199,5 @@
                 @include mixins.text(variables.$col2, center, variables.$font2, 1.5rem, normal, 400, 25px); 
             }
         }
-    }
-    
-    .call-to-action__button {
-        width: 217px;
-        height: 56px;
-        background-color: variables.$col1;
-        border-radius: 6px;
-        border: 0;
-        @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px); 
     }
 }
