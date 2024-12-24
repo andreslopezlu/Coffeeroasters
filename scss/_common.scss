@@ -34,7 +34,6 @@
     .links {
         .links__item {
             @include mixins.text(variables.$col5, center, variables.$font2, 1.2rem, normal, 700, 15px);
-            text-transform: uppercase;
             letter-spacing: 0.923px;
             margin-bottom: 24px;
         }
