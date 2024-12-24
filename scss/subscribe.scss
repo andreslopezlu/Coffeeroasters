@@ -3,6 +3,10 @@
 @use "mixins";
 @use "common";
 
+.navbar-big {
+    display: none;
+}
+
 .main {
     padding-left: 0;
     padding-right: 0;

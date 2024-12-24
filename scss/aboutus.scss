@@ -3,6 +3,10 @@
 @use "mixins";
 @use "common";
 
+.navbar-big {
+    display: none;
+}
+
 .aboutus {
     @include mixins.flexbox(column, flex-start, center);
     position: relative;
