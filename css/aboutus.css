@@ -112,6 +112,10 @@ table {
   width: 24px;
 }
 
+.navbar-big {
+  display: none;
+}
+
 .aboutus {
   display: flex;
   flex-direction: column;

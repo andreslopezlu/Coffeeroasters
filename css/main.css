@@ -127,6 +127,10 @@ table {
   line-height: 25px;
 }
 
+.navbar-big {
+  display: none;
+}
+
 .main-section {
   background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
   height: 500px;

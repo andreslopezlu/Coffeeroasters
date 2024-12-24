@@ -10,7 +10,11 @@
     border-radius: 6px;
     border: 0;
     @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px); 
-}   
+} 
+
+.navbar-big {
+    display: none;
+}
 
 .main-section {
     background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
