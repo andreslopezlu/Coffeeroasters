@@ -1,0 +1,48 @@
+@use "variables";
+@use "mixins";
+
+:root {
+    font-size: 62.5%;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding: 40px 5% 72px 5%;   
+    }
+
+    .navbar {
+        margin-bottom: 50px;
+        
+        .menu-button {
+            display: none;
+        }
+
+        .navbar-big {
+            display: block;
+            @include mixins.flexbox(row, space-between);
+            @include mixins.text(variables.$col5, center, variables.$font2, 1.2rem, normal, 700, 15px);
+            width: 350px;
+        }
+    }
+    
+    .footer {
+    
+        .footer__logo {
+            margin-bottom: 32px;
+        }
+    
+        .links {
+
+            @include mixins.flexbox(row, space-between);
+            width: 280px;
+
+            .links__item {
+                margin-bottom: 65px;
+            }
+        }
+    
+        .social {
+            width: 20%;
+        }
+    }
+  }
