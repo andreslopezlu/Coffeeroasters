@@ -12,6 +12,7 @@
   
   .main-section {
     background-image: url("../assets/home/tablet/image-hero-coffeepress.jpg");
+    margin-bottom: 144px;
 
     .main-section__background {
       background-color: rgba(0, 0, 0, 0);
@@ -33,6 +34,43 @@
     }
   }
 
-  
+  .collection-section {
 
+    .collection-section__title {
+      @include mixins.text(variables.$col5, center, variables.$font1, 11rem, normal, 900, 110px);
+      color: transparent; 
+      margin-bottom: 0;
+    }
+    
+    .collection-section__list {
+      top: -40px;
+      position: relative;
+      width: 78%;
+    }
+
+    .collection-section__item {
+      @include mixins.flexbox(row, center, center);
+
+      .collection-item__info {
+        position: relative;
+        top: -30px;
+      }
+
+      .collection-item__image {
+        img {
+            height: 193px;
+            margin-bottom: 0;
+        }
+      }
+
+      .collection-item__title {
+        @include mixins.text(variables.$col2, left, variables.$font1, 2.4rem, normal, 900, 32px);
+        margin-bottom: 24px;
+      }
+    
+      .collection-item__description {
+        @include mixins.text(variables.$col2, left, variables.$font2, 1.5rem, normal, 400, 25px);
+      }
+    }
+  }
 }
