@@ -4,6 +4,35 @@
 @use "common-tablet";
 
 @media (min-width: 768px) {
-    
 
+  .navbar__logo svg {
+    width: 236px;
+    height: 26px;
   }
+  
+  .main-section {
+    background-image: url("../assets/home/tablet/image-hero-coffeepress.jpg");
+
+    .main-section__background {
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .main-section__info {
+      @include mixins.flexbox(column, center, flex-start);
+      padding-left: 8.5%;
+      width: 57%;
+
+      .main-section__title {
+        @include mixins.text(variables.$col4, left, variables.$font1, 4.8rem, normal, 900, 48px);
+        margin-bottom: 27px;
+      }
+
+      .main-section__description {
+        @include mixins.text(variables.$col4, left, variables.$font2, 1.5rem, normal, 400, 25px);
+      }
+    }
+  }
+
+  
+
+}
