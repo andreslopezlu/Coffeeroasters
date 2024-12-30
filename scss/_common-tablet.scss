@@ -12,6 +12,11 @@
 
     .navbar {
         margin-bottom: 50px;
+
+        .navbar__logo svg {
+            width: 236px;
+            height: 26px;
+        }
         
         .menu-button {
             display: none;

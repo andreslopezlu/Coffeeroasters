@@ -56,7 +56,6 @@
 
 .commitment__info {
     @include mixins.flexbox(column, center, center);
-    
 }
 
 .commitment__title {

@@ -59,6 +59,10 @@ table {
   .navbar {
     margin-bottom: 50px;
   }
+  .navbar .navbar__logo svg {
+    width: 236px;
+    height: 26px;
+  }
   .navbar .menu-button {
     display: none;
   }
@@ -97,10 +101,6 @@ table {
   }
 }
 @media (min-width: 768px) {
-  .navbar__logo svg {
-    width: 236px;
-    height: 26px;
-  }
   .main-section {
     background-image: url("../assets/home/tablet/image-hero-coffeepress.jpg");
     margin-bottom: 144px;
@@ -252,6 +252,9 @@ table {
     align-items: flex-start;
     flex-wrap: nowrap;
     margin-bottom: 144px;
+  }
+  .process-section .process-section__title {
+    margin-bottom: 60px;
   }
   .process-section .process-section__list {
     display: flex;
