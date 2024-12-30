@@ -1,0 +1,96 @@
+@use "resetter";
+@use "variables";
+@use "mixins";
+@use "common-tablet";
+
+@media (min-width: 768px) {
+
+    .navbar {
+        height: 28px;
+    }
+
+    .aboutus {
+        margin-bottom: 144px;
+    }
+
+    .aboutus__info {
+        @include mixins.flexbox(column, center, flex-start);
+        z-index: 2;
+        margin-left: 58px;
+    }
+    
+    .aboutus__title {
+        @include mixins.text(variables.$col4, left, variables.$font1, 3.2rem, normal, 900, 40px);
+        margin-top: 118px;
+    }
+    
+    .aboutus__description {
+        text-align: justify;
+        width: 68%;
+    }
+
+    .commitment {
+        @include mixins.flexbox(row, center, center);
+        margin-bottom: 330px;
+    }
+
+    .commitment__image {
+        margin-right: 60px;
+        height: 450px;
+        width: 280px;
+        margin-bottom: 0;
+    }
+
+    .commitment__info {
+        @include mixins.flexbox(column, center, flex-start);
+    }
+
+    .commitment__title {
+        text-align: left;
+    }
+    
+    .commitment__description {
+        text-align: left;
+    }
+
+    .quality {
+        margin-bottom: 145px;
+    }
+    
+    .quality__image {
+        top: -160px;
+    }
+    
+    .quality__info {
+        margin-top: -80px;
+        // width: 82%;
+    }
+    
+    .quality__description {
+        margin-bottom: 70px;
+    }
+
+    .headquarters {
+        @include mixins.flexbox(column, center, flex-start);
+        margin-bottom: 144px;
+    }
+    
+    .headquarters__locations {
+        @include mixins.flexbox(row, space-between, center);
+        width: 90%;
+    }
+    
+    .headquarters__item {
+        @include mixins.flexbox(column, center, flex-start);
+        margin-bottom: 0;
+    }
+    
+    .item__title {
+        font-size: 2.4rem;
+    }
+    
+    .item__location {
+        text-align: left;
+    }
+
+}

@@ -4,11 +4,6 @@
 @use "common-tablet";
 
 @media (min-width: 768px) {
-
-  .navbar__logo svg {
-    width: 236px;
-    height: 26px;
-  }
   
   .main-section {
     background-image: url("../assets/home/tablet/image-hero-coffeepress.jpg");
@@ -139,7 +134,11 @@
   .process-section {
     @include mixins.flexbox(column, center, flex-start);
     margin-bottom: 144px;
-    
+
+    .process-section__title {
+      margin-bottom: 60px;
+    }
+
     .process-section__list {
       @include mixins.flexbox(row, space-between, flex-start);
       
