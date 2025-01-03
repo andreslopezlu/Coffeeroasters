@@ -71,7 +71,7 @@ table {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     flex-wrap: nowrap;
     color: #83888F;
     text-align: center;

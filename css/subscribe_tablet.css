@@ -101,99 +101,131 @@ table {
   }
 }
 @media (min-width: 768px) {
-  .aboutus {
-    margin-bottom: 144px;
+  .main {
+    padding-left: 0;
+    padding-right: 0;
   }
-  .aboutus__info {
+  .navbar, .footer, .process, .types, .quantity, .grind, .deliver, .order-summary {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .create-plan {
+    margin-bottom: 160px;
+  }
+  .create-plan__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
-    z-index: 2;
-    margin-left: 58px;
+    padding-left: 58px;
   }
-  .aboutus__title {
+  .create-plan__title {
     color: #FEFCF7;
+    text-align: left;
+    font-family: "Fraunces";
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 4.8px;
+    margin-top: 140px;
+    margin-bottom: 48px;
+  }
+  .create-plan__description {
+    color: #FEFCF7;
+    text-align: left;
+    font-family: "Barlow";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    width: 65%;
+  }
+  .create-plan__steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-bottom: 120px;
+    padding-left: 48px;
+  }
+  .steps__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+  }
+  .step__number {
+    margin-bottom: 42px;
+  }
+  .step__title {
+    color: #FFF;
+    text-align: left;
+    font-family: "Fraunces";
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px;
+    margin-bottom: 38px;
+    width: 80%;
+  }
+  .step__description {
+    color: #FFF;
+    text-align: left;
+    font-family: "Barlow";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    width: 85%;
+  }
+  .process, .types, .quantity, .grind, .deliver, .order-summary {
+    margin-bottom: 100px;
+  }
+  .process-top, .types-top, .quantity-top, .grind-top, .deliver-top {
+    margin-bottom: 40px;
+  }
+  .process-header, .types-header, .quantity-header, .grind-header, .deliver-header {
+    color: #83888F;
     text-align: left;
     font-family: "Fraunces";
     font-size: 3.2rem;
     font-style: normal;
     font-weight: 900;
-    line-height: 40px;
-    margin-top: 118px;
+    line-height: 4.8rem;
+    width: 80%;
   }
-  .aboutus__description {
-    text-align: justify;
-    width: 68%;
-  }
-  .commitment {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-bottom: 330px;
-  }
-  .commitment__image {
-    margin-right: 60px;
-    height: 450px;
-    width: 280px;
-    margin-bottom: 0;
-  }
-  .commitment__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-  }
-  .commitment__title {
-    text-align: left;
-  }
-  .commitment__description {
-    text-align: left;
-  }
-  .quality {
-    margin-bottom: 145px;
-  }
-  .quality__image {
-    top: -160px;
-  }
-  .quality__info {
-    margin-top: -80px;
-  }
-  .quality__description {
-    margin-bottom: 70px;
-  }
-  .headquarters {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    margin-bottom: 144px;
-  }
-  .headquarters__locations {
+  .process__list, .types__list, .quantity__list, .grind__list, .deliver__list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: nowrap;
+  }
+  .process__item, .type__item, .quantity__item, .grind__item, .deliver__item {
+    width: 28%;
+    padding: 32px 0 24px 24px;
+  }
+  .process__title, .type__title, .quantity__title, .grind__title, .deliver__title {
+    margin-bottom: 24px;
+  }
+  .process__description, .type__description, .quantity__description, .grind__description, .deliver__description {
     width: 90%;
+    margin-bottom: 85px;
   }
-  .headquarters__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    margin-bottom: 0;
+  .order-summary {
+    padding-left: 44px;
+    margin-bottom: 40px;
   }
-  .item__title {
-    font-size: 2.4rem;
+  .order-summary__title {
+    margin-top: 32px;
   }
-  .item__location {
-    text-align: left;
+  .create-plan__button {
+    margin-bottom: 144px;
   }
-}/*# sourceMappingURL=aboutus-tablet.css.map */
+}/*# sourceMappingURL=subscribe_tablet.css.map */
