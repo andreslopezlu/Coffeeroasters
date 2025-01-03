@@ -24,7 +24,7 @@
 
         .navbar-big {
             display: block;
-            @include mixins.flexbox(row, space-between);
+            @include mixins.flexbox(row, space-between, center);
             @include mixins.text(variables.$col5, center, variables.$font2, 1.2rem, normal, 700, 15px);
             width: 350px;
         }
