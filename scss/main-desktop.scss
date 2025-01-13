@@ -1,0 +1,160 @@
+@use "resetter";
+@use "variables";
+@use "mixins";
+@use "common-desktop";
+
+@media (min-width: 1440px) {
+
+    .main-section {
+        background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
+        margin-bottom: 180px;
+        
+        .main-section__info {
+            @include mixins.flexbox(column, center, flex-start);
+            padding: 0;
+            margin-left: 86px;
+            width: 40%;
+      
+            .main-section__title {
+              @include mixins.text(variables.$col4, left, variables.$font1, 7.2rem, normal, 900, 72px);
+              margin-bottom: 32px;
+            }
+      
+            .main-section__description {
+              @include mixins.text(variables.$col4, left, variables.$font2, 1.6rem, normal, 400, 26px);
+              width: 80%;
+              opacity: 0.8;
+            }
+          }
+    }
+
+    .collection-section {
+
+        .collection-section__title {
+          @include mixins.text(variables.$col5, center, variables.$font1, 18rem, normal, 900, 180px);
+          color: transparent; 
+          margin-bottom: 0;
+        }
+        
+        .collection-section__list {
+          @include mixins.flexbox(row, space-between, center);
+          top: -60px;
+          padding: 0;
+          margin-bottom: 140px;;
+        }
+
+        .first-items{
+            margin: 0;
+        }
+    
+        .collection-section__item {
+          @include mixins.flexbox(column, center, center);
+          width: 20%;
+    
+          .collection-item__info {
+            position: relative;
+            top: 0;
+          }
+    
+          .collection-item__image {
+            img {
+                height: 193px;
+                margin-bottom: 72px;
+            }
+          }
+
+          .collection-item__title {
+            @include mixins.text(variables.$col2, center, variables.$font1, 2.4rem, normal, 900, 32px);
+          }
+        
+          .collection-item__description {
+            @include mixins.text(variables.$col2, center, variables.$font2, 1.6rem, normal, 400, 26px);
+          }
+        }
+    }
+
+    .chooseus-section {
+        padding-left: 6.5%;
+        padding-right: 6.5%;
+        margin-bottom: 200px;
+    
+        .chooseus-section__info {
+            margin-top: 110px;
+            margin-bottom: 86px;
+
+          .chooseus-section__title {
+            @include mixins.text(variables.$col4, center, variables.$font1, 4.0rem, normal, 900, 48px);
+            margin-bottom: 32px;
+          }
+          
+          .chooseus-section__description {
+            width: 45%;
+            margin-bottom: 0;
+          }
+        }
+    
+        .chooseus-section__list {
+            @include mixins.flexbox(row, space-between, stretch);
+    
+          .chooseus-section__item{
+    
+            @include mixins.flexbox(column, center, center);
+            width: 31%;
+            padding-top: 70px;
+            margin-bottom: 0;
+            padding-bottom: 48px;
+    
+            .chooseus-item__image {
+              width: 72px;
+              top: 0;
+              margin: 0 auto;
+              margin-bottom: 56px;
+            }
+    
+            .chooseus-item__info {
+              margin-left: 0;
+            }
+    
+            .chooseus-item__title {
+                @include mixins.text(variables.$col4, center, variables.$font1, 2.4rem, normal, 900, 32px);
+            }
+    
+            .chooseus-item__description {
+              @include mixins.text(variables.$col4, center, variables.$font2, 1.6rem, normal, 400, 26px);
+              width: 75%;
+              margin: 0 auto;
+            }
+          }
+    
+          >:nth-child(3) {
+            margin-bottom: 0;
+        }
+        }
+    
+        .chooseus-section__background {
+          height: 615px;
+        }
+    }
+
+    .process-section {
+        @include mixins.flexbox(column, center, flex-start);
+        margin-bottom: 200px;
+        padding-left: 7%;
+    
+        .process-section__title {
+          margin-bottom: 80px;
+        }
+    
+        .process-section__list {
+            @include mixins.flexbox(row, flex-start);
+            // width: 80%;
+            margin-bottom: 64px;
+            
+            .process-section__item {
+                @include mixins.flexbox(column, stretch, flex-start);
+                width: 18%;
+                margin-right: 15%;
+            }
+        }
+    }
+}
