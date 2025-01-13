@@ -5,9 +5,9 @@
     font-size: 62.5%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
     .main {
-        padding: 40px 5% 72px 5%;   
+        padding: 50px 5.5% 88px 5.5%;   
     }
 
     .navbar {
@@ -26,28 +26,33 @@
             display: block;
             @include mixins.flexbox(row, space-between, center);
             @include mixins.text(variables.$col5, center, variables.$font2, 1.2rem, normal, 700, 15px);
-            width: 350px;
+            width: 260px;
         }
     }
     
     .footer {
+
+        @include mixins.flexbox(row, space-between, center);
     
         .footer__logo {
-            margin-bottom: 32px;
+            margin-bottom: 47px;
+            margin-left: 85px;
         }
     
         .links {
 
-            @include mixins.flexbox(row, space-between);
+            @include mixins.flexbox(row, space-between, center);
             width: 280px;
 
             .links__item {
-                margin-bottom: 65px;
+                margin-bottom: 0px;
             }
         }
     
         .social {
             width: 20%;
+            margin-right: 85px;
+            margin-bottom: 0;
         }
     }
   }
