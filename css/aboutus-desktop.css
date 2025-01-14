@@ -52,9 +52,9 @@ table {
   font-size: 62.5%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .main {
-    padding: 40px 5% 72px 5%;
+    padding: 50px 5.5% 88px 5.5%;
   }
   .navbar {
     margin-bottom: 50px;
@@ -80,141 +80,151 @@ table {
     font-style: normal;
     font-weight: 700;
     line-height: 15px;
-    width: 350px;
+    width: 260px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
   }
   .footer .footer__logo {
-    margin-bottom: 32px;
+    margin-bottom: 47px;
+    margin-left: 85px;
   }
   .footer .links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     flex-wrap: nowrap;
     width: 280px;
   }
   .footer .links .links__item {
-    margin-bottom: 65px;
+    margin-bottom: 0px;
   }
   .footer .social {
     width: 20%;
+    margin-right: 85px;
+    margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .aboutus {
-    margin-bottom: 144px;
-  }
-  .aboutus__image1 {
-    display: none;
+    margin-bottom: 137px;
+    border-radius: 10px;
   }
   .aboutus__image2 {
+    display: none;
+  }
+  .aboutus__image3 {
     border-radius: 10px;
     width: 100%;
-    height: 400px;
+    height: 450px;
     -o-object-fit: cover;
        object-fit: cover;
     position: absolute;
     z-index: 1;
     display: block;
   }
-  .aboutus__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    z-index: 2;
-    margin-left: 58px;
-  }
   .aboutus__title {
     color: #FEFCF7;
     text-align: left;
     font-family: "Fraunces";
-    font-size: 3.2rem;
+    font-size: 4rem;
     font-style: normal;
     font-weight: 900;
-    line-height: 40px;
-    margin-top: 118px;
+    line-height: 48px;
+    margin-top: 115px;
   }
   .aboutus__description {
     text-align: justify;
-    width: 68%;
+    width: 33%;
   }
   .commitment {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-bottom: 330px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 250px;
   }
   .commitment__image {
-    margin-right: 60px;
-    height: 450px;
-    width: 280px;
-    margin-bottom: 0;
-  }
-  .commitment__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+    margin-right: 125px;
+    height: 480px;
+    width: 430px;
   }
   .commitment__title {
-    text-align: left;
+    color: #333D4B;
+    text-align: center;
+    font-family: "Fraunces";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 48px;
+    margin-bottom: 32px;
   }
   .commitment__description {
+    color: #333D4B;
     text-align: left;
+    font-family: "Barlow";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
   }
   .quality {
-    margin-bottom: 145px;
-  }
-  .quality__image1 {
-    display: none;
-  }
-  .quality__image2 {
-    width: 85%;
-    height: auto;
-    position: relative;
-    top: -160px;
-    border-radius: 10px;
-    display: block;
-  }
-  .quality__info {
-    margin-top: -80px;
-  }
-  .quality__description {
-    margin-bottom: 70px;
-  }
-  .headquarters {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    margin-bottom: 144px;
-  }
-  .headquarters__locations {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    width: 90%;
+    margin-bottom: 170px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  .headquarters__item {
+  .quality__image2 {
+    display: none;
+  }
+  .quality__image3 {
+    display: block;
+    top: -80px;
+    position: relative;
+    border-radius: 10px;
+  }
+  .quality__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
-    margin-bottom: 0;
+    margin-right: 10%;
+    margin-top: 30px;
+    width: 45%;
   }
-  .item__title {
-    font-size: 2.4rem;
-  }
-  .item__location {
+  .quality__title {
+    color: #FEFCF7;
     text-align: left;
+    font-family: "Fraunces";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 48px;
+    margin-bottom: 32px;
   }
-}/*# sourceMappingURL=aboutus-tablet.css.map */
+  .quality__description {
+    color: #FEFCF7;
+    text-align: left;
+    font-family: "Barlow";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    opacity: 0.8;
+  }
+  .headquarters {
+    margin-bottom: 170px;
+    margin-left: 7%;
+  }
+  .headquarters__locations {
+    width: 80%;
+  }
+}/*# sourceMappingURL=aboutus-desktop.css.map */

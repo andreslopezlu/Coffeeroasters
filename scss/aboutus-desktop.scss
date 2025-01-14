@@ -1,0 +1,102 @@
+@use "resetter";
+@use "variables";
+@use "mixins";
+@use "common-desktop";
+
+@media (min-width: 1440px) {
+
+    .aboutus {
+        margin-bottom: 137px;
+        border-radius: 10px;
+    }
+
+    .aboutus__image2 {
+        display: none;
+    }
+
+    .aboutus__image3 {
+        border-radius: 10px;
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+        display: block;
+    }
+
+    .aboutus__title {
+        @include mixins.text(variables.$col4, left, variables.$font1, 4.0rem, normal, 900, 48px);
+        margin-top: 115px;
+    }
+    
+    .aboutus__description {
+        text-align: justify;
+        width: 33%;
+    }
+    
+    .commitment {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 250px;
+    }
+
+    .commitment__image {
+        margin-right: 125px;
+        height: 480px;
+        width: 430px;
+    }
+
+    .commitment__title {
+        @include mixins.text(variables.$col2, center, variables.$font1, 4.0rem, normal, 900, 48px);
+        margin-bottom: 32px;
+    }
+    
+    .commitment__description {
+        @include mixins.text(variables.$col2, left, variables.$font2, 1.6rem, normal, 400, 26px);
+    }
+
+    .quality {
+        @include mixins.flexbox(row-reverse, center, center);
+        margin-bottom: 170px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .quality__image2 {
+        display: none;
+    }
+
+    .quality__image3 {
+        display: block;
+        top: -80px;
+        position: relative;
+        border-radius: 10px;
+    }
+    
+    .quality__info {
+        @include mixins.flexbox(column, center, flex-start);
+        margin-right: 10%;
+        margin-top: 30px;
+        width: 45%;
+    }
+
+    .quality__title {
+        @include mixins.text(variables.$col4, left, variables.$font1, 4.0rem, normal, 900, 48px);
+        margin-bottom: 32px;
+    }
+    
+    .quality__description {
+        @include mixins.text(variables.$col4, left, variables.$font2, 1.6rem, normal, 400, 26px);
+        opacity: 0.8;
+    }
+
+    .headquarters {
+        margin-bottom: 170px;
+        margin-left: 7%;
+    }
+    
+    .headquarters__locations {
+        width: 80%;
+    }
+    
+}

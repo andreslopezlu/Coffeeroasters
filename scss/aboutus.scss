@@ -16,13 +16,21 @@
     margin-bottom: 120px;
 }
 
-.aboutus__image {
+.aboutus__image1 {
     border-radius: 10px;
     width: 100%;
     height: 400px;
     object-fit: cover;
     position: absolute;
     z-index: 1;
+}
+
+.aboutus__image2 {
+    display: none;
+}
+
+.aboutus__image3 {
+    display: none;
 }
 
 .aboutus__info {
@@ -74,12 +82,20 @@
     margin-bottom: 120px;
 }
 
-.quality__image {
+.quality__image1 {
     width: 85%;
     height: auto;
     position: relative;
     top: -70px;
     border-radius: 10px;
+}
+
+.quality__image2 {
+    display: none
+}
+
+.quality__image3 {
+    display: none
 }
 
 .quality__info {
