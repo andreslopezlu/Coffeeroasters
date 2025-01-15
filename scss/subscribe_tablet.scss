@@ -19,6 +19,20 @@
         margin-bottom: 160px;
     }
 
+    .create-plan__image1 {
+        display: none;
+    }
+
+    .create-plan__image2 {
+        border-radius: 10px;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+        display: block;
+    }
+
     .create-plan__info {
         @include mixins.flexbox(column, center, flex-start);
         padding-left: 58px;

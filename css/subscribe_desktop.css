@@ -52,9 +52,9 @@ table {
   font-size: 62.5%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .main {
-    padding: 40px 5% 72px 5%;
+    padding: 50px 5.5% 88px 5.5%;
   }
   .navbar {
     margin-bottom: 50px;
@@ -80,45 +80,56 @@ table {
     font-style: normal;
     font-weight: 700;
     line-height: 15px;
-    width: 350px;
+    width: 260px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
   }
   .footer .footer__logo {
-    margin-bottom: 32px;
+    margin-bottom: 47px;
+    margin-left: 85px;
   }
   .footer .links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     flex-wrap: nowrap;
     width: 280px;
   }
   .footer .links .links__item {
-    margin-bottom: 65px;
+    margin-bottom: 0px;
   }
   .footer .social {
     width: 20%;
+    margin-right: 85px;
+    margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
-  .main {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .navbar, .footer, .process, .types, .quantity, .grind, .deliver, .order-summary {
-    margin-left: 5%;
-    margin-right: 5%;
+@media (min-width: 1440px) {
+  .navbar, .footer, .create-plan, .create-plan__steps, .process, .types, .quantity, .grind, .deliver, .order-summary {
+    margin-left: 0;
+    margin-right: 0;
   }
   .create-plan {
-    margin-bottom: 160px;
-  }
-  .create-plan__image1 {
-    display: none;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
   }
   .create-plan__image2 {
+    display: none;
+  }
+  .create-plan__image3 {
     border-radius: 10px;
     width: 100%;
-    height: 400px;
+    height: 450px;
     -o-object-fit: cover;
        object-fit: cover;
     position: absolute;
@@ -126,33 +137,28 @@ table {
     display: block;
   }
   .create-plan__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    padding-left: 58px;
+    padding-left: 86px;
   }
   .create-plan__title {
     color: #FEFCF7;
     text-align: left;
     font-family: "Fraunces";
-    font-size: 4.8rem;
+    font-size: 7.2rem;
     font-style: normal;
     font-weight: 900;
-    line-height: 4.8px;
-    margin-top: 140px;
-    margin-bottom: 48px;
+    line-height: 7.2px;
+    margin-bottom: 80px;
   }
   .create-plan__description {
     color: #FEFCF7;
     text-align: left;
     font-family: "Barlow";
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 25px;
-    width: 65%;
+    line-height: 26px;
+    width: 42%;
+    opacity: 0.8;
   }
   .create-plan__steps {
     display: flex;
@@ -160,18 +166,10 @@ table {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    margin-bottom: 120px;
-    padding-left: 48px;
-  }
-  .steps__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    margin-bottom: 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: 150px;
+    padding-left: 85px;
   }
   .step__number {
     margin-bottom: 42px;
@@ -180,65 +178,81 @@ table {
     color: #FFF;
     text-align: left;
     font-family: "Fraunces";
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     font-style: normal;
     font-weight: 900;
-    line-height: 32px;
-    margin-bottom: 38px;
-    width: 80%;
+    line-height: 36px;
+    margin-bottom: 42px;
+    width: 60%;
   }
   .step__description {
     color: #FFF;
     text-align: left;
     font-family: "Barlow";
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 26px;
+    width: 75%;
+  }
+  .general-steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     width: 85%;
+    margin: 0 auto;
+  }
+  .steps-list {
+    display: block;
+    margin-right: 120px;
+    width: 35%;
+  }
+  .steps-list li {
+    margin-bottom: 48px;
+  }
+  .number {
+    color: #0E8784;
+    text-align: left;
+    font-family: "Fraunces";
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px;
+    margin-right: 25px;
+  }
+  .description {
+    color: #333D4B;
+    text-align: left;
+    font-family: "Fraunces";
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px;
   }
   .process, .types, .quantity, .grind, .deliver, .order-summary {
-    margin-bottom: 100px;
+    margin-bottom: 88px;
   }
   .process-top, .types-top, .quantity-top, .grind-top, .deliver-top {
-    margin-bottom: 40px;
+    margin-bottom: 56px;
   }
   .process-header, .types-header, .quantity-header, .grind-header, .deliver-header {
     color: #83888F;
     text-align: left;
     font-family: "Fraunces";
-    font-size: 3.2rem;
+    font-size: 4rem;
     font-style: normal;
     font-weight: 900;
     line-height: 4.8rem;
-    width: 80%;
-  }
-  .process__list, .types__list, .quantity__list, .grind__list, .deliver__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: nowrap;
-  }
-  .process__item, .type__item, .quantity__item, .grind__item, .deliver__item {
-    width: 28%;
-    padding: 32px 0 24px 24px;
-  }
-  .process__title, .type__title, .quantity__title, .grind__title, .deliver__title {
-    margin-bottom: 24px;
-  }
-  .process__description, .type__description, .quantity__description, .grind__description, .deliver__description {
     width: 90%;
-    margin-bottom: 85px;
   }
   .order-summary {
-    padding-left: 44px;
-    margin-bottom: 40px;
+    padding-left: 64px;
+    margin-bottom: 50px;
   }
   .order-summary__title {
     margin-top: 32px;
+    opacity: 0.8;
   }
-  .create-plan__button {
-    margin-bottom: 144px;
-  }
-}/*# sourceMappingURL=subscribe_tablet.css.map */
+}/*# sourceMappingURL=subscribe_desktop.css.map */

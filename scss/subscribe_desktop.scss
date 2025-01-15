@@ -1,0 +1,116 @@
+@use "resetter";
+@use "variables";
+@use "mixins";
+@use "common-desktop";
+
+@media (min-width: 1440px) {
+
+    .navbar, .footer, .create-plan, .create-plan__steps, .process, .types, .quantity, .grind, .deliver, .order-summary {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .create-plan {
+        margin-bottom: 200px;
+        @include mixins.flexbox(column, flex-start, flex-start);
+    }
+
+    .create-plan__image2 {
+        display: none;
+    }
+
+    .create-plan__image3 {
+        border-radius: 10px;
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+        display: block;
+    }
+
+    .create-plan__info {
+        padding-left: 86px;
+    }
+
+    .create-plan__title {
+        @include mixins.text(variables.$col4, left, variables.$font1, 7.2rem, normal, 900, 7.2px);
+        margin-bottom: 80px;
+    }
+
+    .create-plan__description {
+        @include mixins.text(variables.$col4, left, variables.$font2, 1.6rem, normal, 400, 26px);
+        width: 42%;
+        opacity: 0.8;
+    }
+
+    .create-plan__steps {
+        @include mixins.flexbox(row, center, flex-start);
+        padding-top: 150px;
+        padding-bottom: 150px;
+        margin-bottom: 150px;
+        padding-left: 85px;
+    } 
+
+    .step__number {
+        margin-bottom: 42px;
+    }
+    
+    .step__title {
+        @include mixins.text(variables.$col9, left, variables.$font1, 3.2rem, normal, 900, 36px);
+        margin-bottom: 42px;
+        width: 60%;
+    }
+    
+    .step__description {
+        @include mixins.text(variables.$col9, left, variables.$font2, 1.6rem, normal, 400, 26px);
+        width: 75%;
+    }
+
+    .general-steps {
+        @include mixins.flexbox(row, center, flex-start);
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .steps-list {
+        display: block;
+        margin-right: 120px;
+        width: 35%;
+        li{
+            margin-bottom: 48px;
+        }
+    }
+
+    .number {
+        @include mixins.text(variables.$col1, left, variables.$font1, 2.4rem, normal, 900, 32px);
+        margin-right: 25px;
+    }
+
+    .description {
+        @include mixins.text(variables.$col2, left, variables.$font1, 2.4rem, normal, 900, 32px);
+    }
+
+    .process, .types, .quantity, .grind, .deliver, .order-summary {
+        margin-bottom: 88px;
+    }
+
+    .process-top, .types-top, .quantity-top, .grind-top, .deliver-top {
+        margin-bottom: 56px;
+    }
+
+    .process-header, .types-header, .quantity-header, .grind-header, .deliver-header {
+        @include mixins.text(variables.$col5, left, variables.$font1, 4.0rem, normal, 900, 4.8rem);
+        width: 90%;
+    }
+
+    .order-summary {
+        padding-left: 64px;
+        margin-bottom: 50px;
+    }
+    
+    .order-summary__title {
+        margin-top: 32px;
+        opacity: 0.8;
+    }
+}
