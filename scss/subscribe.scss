@@ -98,6 +98,11 @@
     display: none;
 }
 
+.hide-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 .process, .types, .quantity, .grind, .deliver, .order-summary {
     @include mixins.flexbox(column, center, center);
     margin-bottom: 96px;
@@ -165,4 +170,9 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 120px;
+}
+
+.create-plan__button:hover {
+    background-color: variables.$col6;
+    cursor: pointer;
 }

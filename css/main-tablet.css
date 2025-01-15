@@ -53,6 +53,10 @@ table {
 }
 
 @media (min-width: 768px) {
+  a:visited, a:active, a:link, a:hover {
+    color: #83888F;
+    text-decoration: none;
+  }
   .main {
     padding: 40px 5% 72px 5%;
   }
@@ -82,6 +86,10 @@ table {
     line-height: 15px;
     width: 350px;
   }
+  .navbar .navbar-big p:hover {
+    color: #333D4B;
+    cursor: pointer;
+  }
   .footer .footer__logo {
     margin-bottom: 32px;
   }
@@ -91,7 +99,10 @@ table {
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: nowrap;
-    width: 280px;
+    width: 300px;
+  }
+  .footer .links .footer-link {
+    margin-bottom: 0;
   }
   .footer .links .links__item {
     margin-bottom: 65px;
