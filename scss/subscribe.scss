@@ -28,13 +28,21 @@
     margin-right: 6.5%;
 }
 
-.create-plan__image {
+.create-plan__image1 {
     border-radius: 10px;
     width: 100%;
     height: 400px;
     object-fit: cover;
     position: absolute;
     z-index: 1;
+}
+
+.create-plan__image2 {
+    display: none;
+}
+
+.create-plan__image3 {
+    display: none;
 }
 
 .create-plan__info {
@@ -84,6 +92,10 @@
 
 .create-plan__steps > :nth-child(3) {
     margin-bottom: 0;
+}
+
+.steps-list {
+    display: none;
 }
 
 .process, .types, .quantity, .grind, .deliver, .order-summary {
