@@ -12,6 +12,11 @@
     @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px); 
 } 
 
+.call-to-action__button:hover {
+    background-color: variables.$col6;
+    cursor: pointer;
+}
+
 .navbar-big {
     display: none;
 }

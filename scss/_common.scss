@@ -5,6 +5,11 @@
     font-size: 62.5%;
 }
 
+a:visited, a:active, a:link, a:hover {
+    color: #83888F; 
+    text-decoration: none;
+}
+
 .main {
     padding: 32px 6.5% 72px 6.5%;
     margin: 0 auto;
@@ -32,10 +37,20 @@
     }
 
     .links {
+
+        .footer-link {
+            margin-bottom: 0;
+        }
+
         .links__item {
             @include mixins.text(variables.$col5, center, variables.$font2, 1.2rem, normal, 700, 15px);
             letter-spacing: 0.923px;
             margin-bottom: 24px;
+        }
+
+        .links__item:hover {
+            color: variables.$col4;
+            cursor: pointer;
         }
 
         >:nth-child(3) {

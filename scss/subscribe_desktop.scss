@@ -71,14 +71,43 @@
         @include mixins.flexbox(row, center, flex-start);
         width: 85%;
         margin: 0 auto;
+
+        .steps-description {
+            section:nth-child(n+2) {
+                .hide-button {
+                    transform: rotate(180deg);
+                }
+                div:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
     }
 
     .steps-list {
         display: block;
         margin-right: 120px;
-        width: 35%;
+        width: 38%;
+        
         li{
             margin-bottom: 48px;
+        }
+
+        ul li:nth-child(n+2) {
+            .number {
+                @include mixins.text(variables.$col5, left, variables.$font1, 2.4rem, normal, 900, 32px);
+                opacity: 0.6;
+            }
+
+            .description {
+                @include mixins.text(variables.$col2, left, variables.$font1, 2.4rem, normal, 900, 32px);
+                opacity: 0.8;
+            }
+        }
+
+        ul li:hover {
+            opacity: 0.4;
+            cursor: pointer;
         }
     }
 
@@ -102,6 +131,10 @@
     .process-header, .types-header, .quantity-header, .grind-header, .deliver-header {
         @include mixins.text(variables.$col5, left, variables.$font1, 4.0rem, normal, 900, 4.8rem);
         width: 90%;
+    }
+
+    .process__item:hover, .type__item:hover, .quantity__item:hover, .grind__item:hover, .deliver__item:hover {
+        background-color: variables.$col3;
     }
 
     .order-summary {

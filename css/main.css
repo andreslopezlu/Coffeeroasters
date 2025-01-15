@@ -52,6 +52,11 @@ table {
   font-size: 62.5%;
 }
 
+a:visited, a:active, a:link, a:hover {
+  color: #83888F;
+  text-decoration: none;
+}
+
 .main {
   padding: 32px 6.5% 72px 6.5%;
   margin: 0 auto;
@@ -84,6 +89,9 @@ table {
   margin-top: 54px;
   margin-bottom: 49px;
 }
+.footer .links .footer-link {
+  margin-bottom: 0;
+}
 .footer .links .links__item {
   color: #83888F;
   text-align: center;
@@ -94,6 +102,10 @@ table {
   line-height: 15px;
   letter-spacing: 0.923px;
   margin-bottom: 24px;
+}
+.footer .links .links__item:hover {
+  color: #FEFCF7;
+  cursor: pointer;
 }
 .footer .links > :nth-child(3) {
   margin-bottom: 48px;
@@ -124,6 +136,11 @@ table {
   font-style: normal;
   font-weight: 900;
   line-height: 25px;
+}
+
+.call-to-action__button:hover {
+  background-color: #66D2CF;
+  cursor: pointer;
 }
 
 .navbar-big {

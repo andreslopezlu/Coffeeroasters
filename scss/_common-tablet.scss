@@ -6,6 +6,12 @@
 }
 
 @media (min-width: 768px) {
+
+    a:visited, a:active, a:link, a:hover {
+        color: #83888F; 
+        text-decoration: none;
+    }
+
     .main {
         padding: 40px 5% 72px 5%;   
     }
@@ -27,6 +33,11 @@
             @include mixins.flexbox(row, space-between, center);
             @include mixins.text(variables.$col5, center, variables.$font2, 1.2rem, normal, 700, 15px);
             width: 350px;
+
+            p:hover {
+                color: variables.$col2;
+                cursor: pointer;
+            }
         }
     }
     
@@ -38,8 +49,12 @@
     
         .links {
 
+            .footer-link {
+                margin-bottom: 0;
+            }
+
             @include mixins.flexbox(row, space-between);
-            width: 280px;
+            width: 300px;
 
             .links__item {
                 margin-bottom: 65px;
