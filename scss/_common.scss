@@ -25,6 +25,41 @@ a:visited, a:active, a:link, a:hover {
         height: auto;
         fill: variables.$col2;
     }
+
+    .menu-button--inactive {
+        display: none;
+    }
+
+    .close-button--inactive {
+        display: none;
+    }
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.modal--inactive {
+    display: none;
+}
+
+.modal--active {
+    position: absolute;
+    z-index: 1;
+    height: 500px;
+    background: linear-gradient(0deg, rgba(254, 252, 247, 0.50) 0%, #FEFCF7 55.94%);
+    padding-top: 40px;
+    left: 0;
+
+    p {
+        margin-bottom: 32px;
+        @include mixins.text(variables.$col2, center, variables.$font1, 2.4rem, normal, 900, 3.2px);
+        line-height: 32px; /* 133.333% */
+    }
 }
 
 .footer {
