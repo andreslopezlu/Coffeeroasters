@@ -407,6 +407,16 @@ a:visited, a:active, a:link, a:hover {
   margin-bottom: 24px;
 }
 
+.process-placeholder, .type-placeholder, .quantity-placeholder, .grind-placeholder, .deliver-placeholder {
+  color: #0E8784;
+}
+
+.process-placeholder-hidden, .type-placeholder-hidden, .quantity-placeholder-hidden, .grind-placeholder-hidden, .deliver-placeholder-hidden {
+  color: rgba(0, 0, 0, 0);
+  text-decoration: underline;
+  text-decoration-color: #0E8784;
+}
+
 .create-plan__button {
   color: #FEFCF7;
   text-align: center;
