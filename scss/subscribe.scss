@@ -130,10 +130,6 @@
     margin-bottom: 16px;
 }
 
-.selected {
-    border: red solid 2px;
-}
-
 .process__title, .type__title, .quantity__title, .grind__title, .deliver__title {
     @include mixins.text(variables.$col2, left, variables.$font1, 2.4rem, normal, 900, 32px);
     margin-bottom: 20px;
