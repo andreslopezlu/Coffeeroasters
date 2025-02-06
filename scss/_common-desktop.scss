@@ -40,7 +40,7 @@
             }
         }
     }
-    
+
     .footer {
 
         @include mixins.flexbox(row, space-between, center);
