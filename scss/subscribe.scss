@@ -160,6 +160,16 @@
     margin-bottom: 24px;
 }
 
+.process-placeholder, .type-placeholder, .quantity-placeholder, .grind-placeholder, .deliver-placeholder {  
+    color: variables.$col1;
+}
+
+.process-placeholder-hidden, .type-placeholder-hidden, .quantity-placeholder-hidden, .grind-placeholder-hidden, .deliver-placeholder-hidden {  
+    color: rgba(0, 0, 0, 0);
+    text-decoration: underline;
+    text-decoration-color: variables.$col1;
+}
+
 .create-plan__button {
     @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px);
     width: 220px;
