@@ -41,10 +41,6 @@
         }
     }
 
-    .process__item:hover, .type__item:hover, .quantity__item:hover, .grind__item:hover, .deliver__item:hover {
-        background-color: variables.$col3
-    }
-    
     .footer {
 
         @include mixins.flexbox(row, space-between, center);
