@@ -255,4 +255,13 @@ table {
   .create-plan__button {
     margin-bottom: 144px;
   }
+  .checkout-button a {
+    color: #FEFCF7;
+    text-align: center;
+    font-family: "Fraunces";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 25px;
+  }
 }/*# sourceMappingURL=subscribe_tablet.css.map */

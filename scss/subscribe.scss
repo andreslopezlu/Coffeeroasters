@@ -180,6 +180,12 @@
     color: variables.$col1;
 }
 
+.process-confirmation, .type-confirmation, .quantity-confirmation, .grind-confirmation, .deliver-confirmation {  
+    color: variables.$col1;
+    text-decoration: underline;
+    text-decoration-color: variables.$col1;
+}
+
 .process-placeholder-hidden, .type-placeholder-hidden, .quantity-placeholder-hidden, .grind-placeholder-hidden, .deliver-placeholder-hidden {  
     color: rgba(0, 0, 0, 0);
     text-decoration: underline;
@@ -201,4 +207,63 @@
 .create-plan__button:hover {
     background-color: variables.$col6;
     cursor: pointer;
+}
+
+.error {
+    @include mixins.text(red, center, variables.$font1, 1.8rem, normal, 900, 25px);
+    margin-bottom: 12px;
+}
+
+.error-hidden {
+    display: none;
+}
+
+.subscription-confirmation {
+    margin-left: 6%;
+    margin-right: 6%;
+    border-radius: 8px;
+    background-color: variables.$col4;
+    max-width: 540px;
+}
+
+.subscription-hidden {
+    display: none;
+}
+
+.confirmation-title {
+    @include mixins.text(variables.$col9, left, variables.$font1, 2.8rem, normal, 900, 32px);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 24px;
+    background-color: variables.$col10;
+    border-radius: 8px 8px 0 0;
+}
+
+.order-confirmation {
+    @include mixins.text(variables.$col5, left, variables.$font1, 2.4rem, normal, 900, 40px);
+    padding-top: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 15px;
+}
+
+.confirmation-description {
+    @include mixins.text(variables.$col2, left, variables.$font2, 1.5rem, normal, 400, 25px);
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 24px;
+}
+
+.checkout-button {
+
+    width: 100%;
+    background-color: variables.$col1;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.checkout-button a {
+    @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px);
 }

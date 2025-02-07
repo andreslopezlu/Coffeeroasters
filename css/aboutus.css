@@ -61,6 +61,13 @@ a:visited, a:active, a:link, a:hover {
   padding: 32px 6.5% 72px 6.5%;
   margin: 0 auto;
   background-color: #FEFCF7;
+  display: flex;
+  flex-direction: column;
+}
+
+.main.blurred > *:not(.subscription-confirmation) {
+  filter: blur(5px);
+  transition: filter 0.15s ease;
 }
 
 .navbar {
@@ -98,7 +105,7 @@ a:visited, a:active, a:link, a:hover {
 .modal--active {
   position: absolute;
   z-index: 1;
-  height: 500px;
+  height: 450px;
   background: linear-gradient(0deg, rgba(254, 252, 247, 0.5) 0%, #FEFCF7 55.94%);
   padding-top: 40px;
   left: 0;
@@ -113,6 +120,13 @@ a:visited, a:active, a:link, a:hover {
   font-weight: 900;
   line-height: 3.2px;
   line-height: 32px; /* 133.333% */
+}
+
+.subscription-modal-active {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  align-self: center;
 }
 
 .footer {
