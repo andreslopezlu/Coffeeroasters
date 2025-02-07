@@ -215,8 +215,15 @@ table {
     width: 85%;
     margin: 0 auto;
   }
-  .general-steps .steps-description section:nth-child(n+2) .hide-button {
-    transform: rotate(180deg);
+  .general-steps .steps-description {
+    width: 100%;
+  }
+  .completed {
+    text-decoration: line-through;
+    text-decoration-color: #0E8784;
+  }
+  .item-hidden {
+    display: none;
   }
   .steps-list {
     display: block;
@@ -226,31 +233,7 @@ table {
   .steps-list li {
     margin-bottom: 48px;
   }
-  .steps-list ul li:nth-child(n+2) .number {
-    color: #83888F;
-    text-align: left;
-    font-family: "Fraunces";
-    font-size: 2.4rem;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 32px;
-    opacity: 0.6;
-  }
-  .steps-list ul li:nth-child(n+2) .description {
-    color: #333D4B;
-    text-align: left;
-    font-family: "Fraunces";
-    font-size: 2.4rem;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 32px;
-    opacity: 0.8;
-  }
-  .steps-list ul li:hover {
-    opacity: 0.4;
-    cursor: pointer;
-  }
-  .number {
+  .steps-list ul li:nth-child(n+1) .number {
     color: #0E8784;
     text-align: left;
     font-family: "Fraunces";
@@ -258,9 +241,10 @@ table {
     font-style: normal;
     font-weight: 900;
     line-height: 32px;
+    opacity: 0.85;
     margin-right: 25px;
   }
-  .description {
+  .steps-list ul li:nth-child(n+1) .description {
     color: #333D4B;
     text-align: left;
     font-family: "Fraunces";
@@ -268,6 +252,11 @@ table {
     font-style: normal;
     font-weight: 900;
     line-height: 32px;
+    opacity: 0.9;
+  }
+  .steps-list ul li:hover {
+    opacity: 0.4;
+    cursor: pointer;
   }
   .process, .types, .quantity, .grind, .deliver, .order-summary {
     margin-bottom: 88px;

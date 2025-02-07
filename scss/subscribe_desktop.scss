@@ -73,15 +73,22 @@
         margin: 0 auto;
 
         .steps-description {
+            width: 100%;
             section:nth-child(n+2) {
                 .hide-button {
-                    transform: rotate(180deg);
-                }
-                div:nth-child(2) {
-                    // display: none;   
+                    // transform: rotate(180deg);
                 }
             }
         }
+    }
+
+    .completed {
+        text-decoration: line-through;
+        text-decoration-color: variables.$col1;
+    }
+
+    .item-hidden {
+        display:none;
     }
 
     .steps-list {
@@ -93,15 +100,16 @@
             margin-bottom: 48px;
         }
 
-        ul li:nth-child(n+2) {
+        ul li:nth-child(n+1) {
             .number {
-                @include mixins.text(variables.$col5, left, variables.$font1, 2.4rem, normal, 900, 32px);
-                opacity: 0.6;
+                @include mixins.text(variables.$col1, left, variables.$font1, 2.4rem, normal, 900, 32px);
+                opacity: 0.85;
+                margin-right: 25px;
             }
 
             .description {
                 @include mixins.text(variables.$col2, left, variables.$font1, 2.4rem, normal, 900, 32px);
-                opacity: 0.8;
+                opacity: 0.9;
             }
         }
 
@@ -109,15 +117,6 @@
             opacity: 0.4;
             cursor: pointer;
         }
-    }
-
-    .number {
-        @include mixins.text(variables.$col1, left, variables.$font1, 2.4rem, normal, 900, 32px);
-        margin-right: 25px;
-    }
-
-    .description {
-        @include mixins.text(variables.$col2, left, variables.$font1, 2.4rem, normal, 900, 32px);
     }
 
     .process, .types, .quantity, .grind, .deliver, .order-summary {

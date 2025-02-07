@@ -94,6 +94,11 @@
         @include mixins.flexbox(row, space-between, stretch);
     }
 
+    
+    .item-hidden {
+        display:none;
+    }
+
     .process__item, .type__item, .quantity__item, .grind__item, .deliver__item {
         width: 28%;
         padding: 32px 0 24px 24px;
