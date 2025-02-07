@@ -285,4 +285,13 @@ table {
     margin-top: 32px;
     opacity: 0.8;
   }
+  .checkout-button a {
+    color: #FEFCF7;
+    text-align: center;
+    font-family: "Fraunces";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 25px;
+  }
 }/*# sourceMappingURL=subscribe_desktop.css.map */

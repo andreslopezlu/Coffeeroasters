@@ -74,11 +74,6 @@
 
         .steps-description {
             width: 100%;
-            section:nth-child(n+2) {
-                .hide-button {
-                    // transform: rotate(180deg);
-                }
-            }
         }
     }
 
@@ -144,5 +139,9 @@
     .order-summary__title {
         margin-top: 32px;
         opacity: 0.8;
+    }
+
+    .checkout-button a {
+        @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px);
     }
 }

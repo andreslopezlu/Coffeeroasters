@@ -31,6 +31,30 @@ const quantityContainer = document.getElementById("quantity");
 const grindContainer = document.getElementById("grind");
 const deliverContainer = document.getElementById("deliver");
 
+const createPlanButton = document.querySelector(".create-plan__button")
+
+const subscriptionConfirmationContainer = document.querySelector(".subscription-confirmation")
+
+const processConfirmation = document.querySelector(".process-confirmation")
+const typeConfirmation = document.querySelector(".type-confirmation")
+const quantityConfirmation = document.querySelector(".quantity-confirmation")
+const grindConfirmation = document.querySelector(".grind-confirmation")
+const deliverConfirmation = document.querySelector(".deliver-confirmation")
+
+const main = document.querySelector("main")
+
+const navbar = document.querySelector(".navbar")
+
+const error = document.querySelector(".error")
+
+const results = {
+    "process": "no",
+    "type": "no",
+    "quantity": "no",
+    "grind": "no",
+    "deliver": "no"
+}
+
 const process = {
     "capsule" : "Capsule",
     "filter" : "Filter",
@@ -90,18 +114,20 @@ const clickProcess = (event) => {
     const element = event.target.closest("div")
     const title = element.querySelector("p").innerText
     processPlaceholder.innerText = selected(process, title.toLowerCase())
+    processConfirmation.innerText = selected(process, title.toLowerCase())
     if (processPlaceholder.classList.contains("process-placeholder-hidden")) {
         processPlaceholder.classList.toggle("process-placeholder-hidden")
     }
     element.classList.toggle("selected")
     applyStyles(processItems)
     const step = document.querySelectorAll(".steps-list li")[0].querySelectorAll("span")[1]
-    if (!step.classList.contains("completed")) {
+    if (!step.classList.contains("completed"))   {
         step.classList.toggle("completed")
     }
     processList.classList.toggle("item-hidden")
     typeList.classList.toggle("item-hidden")
-    processContainer.scrollIntoView()
+    typeContainer.scrollIntoView()
+    results["process"] = "ok"
 }
 
 const clickType = (event) => {
@@ -109,6 +135,7 @@ const clickType = (event) => {
     const element = event.target.closest("div")
     const title = element.querySelector("p").innerText
     typePlaceholder.innerText = selected(type, title.toLowerCase())
+    typeConfirmation.innerText = selected(type, title.toLowerCase())
     if (typePlaceholder.classList.contains("type-placeholder-hidden")) {
         typePlaceholder.classList.toggle("type-placeholder-hidden")
     }
@@ -120,7 +147,8 @@ const clickType = (event) => {
     }
     typeList.classList.toggle("item-hidden")
     quantityList.classList.toggle("item-hidden")
-    typeContainer.scrollIntoView()
+    quantityContainer.scrollIntoView()
+    results["type"] = "ok"
 }
 
 const clickQuantity = (event) => {
@@ -128,6 +156,7 @@ const clickQuantity = (event) => {
     const element = event.target.closest("div")
     const title = element.querySelector("p").innerText
     quantityPlaceholder.innerText = selected(quantity, title.toLowerCase())
+    quantityConfirmation.innerText = selected(quantity, title.toLowerCase())
     if (quantityPlaceholder.classList.contains("quantity-placeholder-hidden")) {
         quantityPlaceholder.classList.toggle("quantity-placeholder-hidden")
     }
@@ -139,7 +168,8 @@ const clickQuantity = (event) => {
     }
     quantityList.classList.toggle("item-hidden")
     grindList.classList.toggle("item-hidden")
-    quantityContainer.scrollIntoView()
+    grindContainer.scrollIntoView()
+    results["quantity"] = "ok"
 }
 
 const clickGrind = (event) => {
@@ -147,6 +177,7 @@ const clickGrind = (event) => {
     const element = event.target.closest("div")
     const title = element.querySelector("p").innerText
     grindPlaceholder.innerText = selected(grind, title.toLowerCase())
+    grindConfirmation.innerText = selected(grind, title.toLowerCase())
     if (grindPlaceholder.classList.contains("grind-placeholder-hidden")) {
         grindPlaceholder.classList.toggle("grind-placeholder-hidden")
     }
@@ -158,7 +189,8 @@ const clickGrind = (event) => {
     }
     grindList.classList.toggle("item-hidden")
     deliverList.classList.toggle("item-hidden")
-    grindContainer.scrollIntoView()
+    deliverContainer.scrollIntoView()
+    results["grind"] = "ok"
 }
 
 const clickDeliver = (event) => {
@@ -166,6 +198,7 @@ const clickDeliver = (event) => {
     const element = event.target.closest("div")
     const title = element.querySelector("p").innerText
     deliverPlaceholder.innerText = selected(deliver, title.toLowerCase())
+    deliverConfirmation.innerText = selected(deliver, title.toLowerCase())
     if (deliverPlaceholder.classList.contains("deliver-placeholder-hidden")) {
         deliverPlaceholder.classList.toggle("deliver-placeholder-hidden")
     }
@@ -176,7 +209,7 @@ const clickDeliver = (event) => {
         step.classList.toggle("completed")
     }
     deliverList.classList.toggle("item-hidden")
-    deliverContainer.scrollIntoView()
+    results["deliver"] = "ok"
 }
 
 const processHiddeButton = (event) => {
@@ -204,6 +237,34 @@ const deliverHiddeButton = (event) => {
     hiddeButton5.classList.toggle("invert-rotation")
 }
 
+const createPlan = () => {
+    switch ("no") {
+        case results["process"]:
+            !error.classList.contains("error-hidden") ? null : error.classList.toggle("error-hidden")
+            break;
+        case results["type"]:
+            !error.classList.contains("error-hidden") ? null : error.classList.toggle("error-hidden")
+            break;
+        case results["quantity"]:
+            !error.classList.contains("error-hidden") ? null : error.classList.toggle("error-hidden")
+            break;
+        case results["grind"]:
+            !error.classList.contains("error-hidden") ? null : error.classList.toggle("error-hidden")
+            break;
+        case results["deliver"]:
+            !error.classList.contains("error-hidden") ? null : error.classList.toggle("error-hidden")
+            break;
+        default:
+            if (main.classList.contains("blurred")){
+                return
+            }
+            main.classList.toggle("blurred")
+            navbar.scrollIntoView()
+            subscriptionConfirmationContainer.classList.toggle("subscription-hidden")
+            subscriptionConfirmationContainer.classList.toggle("subscription-modal-active")
+    }
+}
+
 processList.addEventListener("click", clickProcess)
 typeList.addEventListener("click", clickType)
 quantityList.addEventListener("click", clickQuantity)
@@ -215,3 +276,5 @@ hiddeButton2.addEventListener("click", typeHiddeButton)
 hiddeButton3.addEventListener("click", quantityHiddeButton)
 hiddeButton4.addEventListener("click", grindHiddeButton)
 hiddeButton5.addEventListener("click", deliverHiddeButton)
+
+createPlanButton.addEventListener("click", createPlan)

@@ -125,4 +125,8 @@
     .create-plan__button {
         margin-bottom: 144px;
     }
+
+    .checkout-button a {
+        @include mixins.text(variables.$col4, center, variables.$font1, 1.8rem, normal, 900, 25px);
+    }
 }
