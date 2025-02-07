@@ -19,6 +19,18 @@ const quantityPlaceholder = document.querySelector(".quantity-placeholder")
 const grindPlaceholder = document.querySelector(".grind-placeholder")
 const deliverPlaceholder = document.querySelector(".deliver-placeholder")
 
+const hiddeButton1 = document.querySelector(".hide-button1")
+const hiddeButton2 = document.querySelector(".hide-button2")
+const hiddeButton3 = document.querySelector(".hide-button3")
+const hiddeButton4 = document.querySelector(".hide-button4")
+const hiddeButton5 = document.querySelector(".hide-button5")
+
+const processContainer = document.getElementById("process");
+const typeContainer = document.getElementById("type");
+const quantityContainer = document.getElementById("quantity");
+const grindContainer = document.getElementById("grind");
+const deliverContainer = document.getElementById("deliver");
+
 const process = {
     "capsule" : "Capsule",
     "filter" : "Filter",
@@ -83,7 +95,15 @@ const clickProcess = (event) => {
     }
     element.classList.toggle("selected")
     applyStyles(processItems)
+    const step = document.querySelectorAll(".steps-list li")[0].querySelectorAll("span")[1]
+    if (!step.classList.contains("completed")) {
+        step.classList.toggle("completed")
+    }
+    processList.classList.toggle("item-hidden")
+    typeList.classList.toggle("item-hidden")
+    processContainer.scrollIntoView()
 }
+
 const clickType = (event) => {
     deselectItems(typeItems)
     const element = event.target.closest("div")
@@ -94,7 +114,15 @@ const clickType = (event) => {
     }
     element.classList.toggle("selected")
     applyStyles(typeItems)
+    const step = document.querySelectorAll(".steps-list li")[1].querySelectorAll("span")[1]
+    if (!step.classList.contains("completed")) {
+        step.classList.toggle("completed")
+    }
+    typeList.classList.toggle("item-hidden")
+    quantityList.classList.toggle("item-hidden")
+    typeContainer.scrollIntoView()
 }
+
 const clickQuantity = (event) => {
     deselectItems(quantityItems)
     const element = event.target.closest("div")
@@ -105,7 +133,15 @@ const clickQuantity = (event) => {
     }
     element.classList.toggle("selected")
     applyStyles(quantityItems)
+    const step = document.querySelectorAll(".steps-list li")[2].querySelectorAll("span")[1]
+    if (!step.classList.contains("completed")) {
+        step.classList.toggle("completed")
+    }
+    quantityList.classList.toggle("item-hidden")
+    grindList.classList.toggle("item-hidden")
+    quantityContainer.scrollIntoView()
 }
+
 const clickGrind = (event) => {
     deselectItems(grindItems)
     const element = event.target.closest("div")
@@ -116,7 +152,15 @@ const clickGrind = (event) => {
     }
     element.classList.toggle("selected")
     applyStyles(grindItems)
+    const step = document.querySelectorAll(".steps-list li")[3].querySelectorAll("span")[1]
+    if (!step.classList.contains("completed")) {
+        step.classList.toggle("completed")
+    }
+    grindList.classList.toggle("item-hidden")
+    deliverList.classList.toggle("item-hidden")
+    grindContainer.scrollIntoView()
 }
+
 const clickDeliver = (event) => {
     deselectItems(deliverItems)
     const element = event.target.closest("div")
@@ -127,6 +171,37 @@ const clickDeliver = (event) => {
     }
     element.classList.toggle("selected")
     applyStyles(deliverItems)
+    const step = document.querySelectorAll(".steps-list li")[4].querySelectorAll("span")[1]
+    if (!step.classList.contains("completed")) {
+        step.classList.toggle("completed")
+    }
+    deliverList.classList.toggle("item-hidden")
+    deliverContainer.scrollIntoView()
+}
+
+const processHiddeButton = (event) => {
+    processList.classList.toggle("item-hidden")
+    hiddeButton1.classList.toggle("invert-rotation")
+}
+
+const typeHiddeButton = (event) => {
+    typeList.classList.toggle("item-hidden")
+    hiddeButton2.classList.toggle("invert-rotation")
+}
+
+const quantityHiddeButton = (event) => {
+    quantityList.classList.toggle("item-hidden")
+    hiddeButton3.classList.toggle("invert-rotation")
+}
+
+const grindHiddeButton = (event) => {
+    grindList.classList.toggle("item-hidden")
+    hiddeButton4.classList.toggle("invert-rotation")
+}
+
+const deliverHiddeButton = (event) => {
+    deliverList.classList.toggle("item-hidden")
+    hiddeButton5.classList.toggle("invert-rotation")
 }
 
 processList.addEventListener("click", clickProcess)
@@ -134,3 +209,9 @@ typeList.addEventListener("click", clickType)
 quantityList.addEventListener("click", clickQuantity)
 grindList.addEventListener("click", clickGrind)
 deliverList.addEventListener("click", clickDeliver)
+
+hiddeButton1.addEventListener("click", processHiddeButton)
+hiddeButton2.addEventListener("click", typeHiddeButton)
+hiddeButton3.addEventListener("click", quantityHiddeButton)
+hiddeButton4.addEventListener("click", grindHiddeButton)
+hiddeButton5.addEventListener("click", deliverHiddeButton)

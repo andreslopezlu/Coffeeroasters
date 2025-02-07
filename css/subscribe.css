@@ -303,7 +303,23 @@ a:visited, a:active, a:link, a:hover {
   display: none;
 }
 
-.hide-button:hover {
+.hide-button2, .hide-button3, .hide-button4, .hide-button5 {
+  transform: rotate(180deg);
+}
+
+.hide-button1.invert-rotation {
+  transform: rotate(-180deg);
+}
+
+.invert-rotation {
+  transform: rotate(360deg);
+}
+
+.item-hidden {
+  display: none;
+}
+
+.hide-button1:hover, .hide-button2:hover, .hide-button3:hover, .hide-button4:hover, .hide-button5:hover {
   cursor: pointer;
   opacity: 0.7;
 }
